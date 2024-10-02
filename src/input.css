@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* only target html tags in the kayers */
+  html {
+    font-family: "Quicksand", sans-serif;
+  }
+}
+
+@layer components {
+  /* use react instead with utility classes only */
+  .menu-item {
+    @apply relative flex h-full cursor-pointer items-center p-4 font-bold text-pink-200 ease-in-out hover:bg-white/10 hover:text-zinc-200;
+  }
+}
