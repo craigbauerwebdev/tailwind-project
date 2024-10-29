@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       keyframes: {
         wavey: {
-          "0%", "100%": {
+          "0%, 100%": {
             transform: "scaleY(0.5)"
           },
           "50%": {
@@ -15,8 +15,11 @@ module.exports = {
       },
       animation: {
         wavey: "wavey 1000ms linear infinite"
-      }
-    }
+      },
+    },
   },
-  plugins: [require("./plugins/openVariant")],
+  plugins: [
+    require("./plugins/openVariant"),
+    require("./plugins/animationDelay"),
+  ],
 };
